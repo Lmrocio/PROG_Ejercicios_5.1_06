@@ -25,5 +25,10 @@ val articulos = listOf(articulo1, articulo2, ordenador1, ordenador2)
 ## Responde a las siguientes preguntas:
 
 1. ¿De qué tipo genera en la lista por defecto el compilador?
+En Kotlin, el compilador genera por defecto el tipo más genérico de los elementos de una lista. En este caso, la lista tiene elementos de tipo Articulo y Ordenador, por lo que el compilador inferirá como tipo más general Articulo porque es la clase base o padre de Ordenador. Es decir, por defecto la lista será de tipo Articulo (List<Articulo>)
+
 2. ¿Qué está ocurriendo en este ejemplo con respecto a lo que hemos visto del polimorfismo de la herencia?
+El polimorfismo nos permite tratar a los elementos de una clase derivada como los elementos de la clase base. Esto nos permite, entre otras cosas, crear listas con ambas clases que podemos recorrer aplicando el mismo método: el método .promocionNavidad() porque es heredado de una clase a otra.
+
 3. ¿Qué pasaría si creáramos la lista con listOf<Ordenador>? ¿Y si la hiciéramos con listOf<Any>?
+En ese caso, la lista sólo podría contener elementos de tipo Ordenaddor, mientras que si hacemos una lista de tipo Any, esta podría contener cualquier tipo de objeto en su interior. Esto último, como desventaja, no nos permitiría acceder a los métodos y propiedades específicas de las clases.
